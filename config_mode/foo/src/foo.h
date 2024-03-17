@@ -3,5 +3,5 @@
 
 namespace foo
 {
-	void greet();
+    void greet();
 }

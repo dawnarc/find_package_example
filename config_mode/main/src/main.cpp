@@ -5,5 +5,5 @@
 
 int main(char** args, int argn)
 {
-	foo::greet();
+    foo::greet();
 }

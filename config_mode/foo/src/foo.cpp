@@ -4,5 +4,5 @@
 
 void foo::greet()
 {
-	printf("I'm foo.\n");
+    printf("I'm foo.\n");
 }
