@@ -54,6 +54,9 @@ Create building config files with the argument (FOO_DIR) to locate third party p
 
     cmake . -B build -DFOO_DIR=D:/my_libs/FOO/lib/cmake/FOO
 
+> [!IMPORTANT]  
+> If main project add dependency using `add_subdirectory(foo)`, thus you can run command without `-DFOO_DIR`.
+
 Start building:
 
     cmake --build build --config release
