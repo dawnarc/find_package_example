@@ -6,8 +6,8 @@ There're two directories:
 + `module_mode`: the example to demonstrate Module Mode (`find_package( FOO REQUIRED )`)
 
 > [!TIP]
-> Config Mode vs Module Mode
-> Config Mode is is suitable for developing third-party libraries published to the Internet.
+> Config Mode vs Module Mode  
+> Config Mode is is suitable for developing third-party libraries published to the Internet.  
 > Module Mode is more convenient to configure private team projects.
 
 ## Config Mode
@@ -104,16 +104,16 @@ You must add `FindXXX.cmake` file for you every third party library.
 Take a look at [CMakeLists.txt in main](module_mode/main/CMakeLists.txt):
 + Add path to search FindFOO.cmake:
 
-        set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/modules/")
+    set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/modules/")
 
 + Then use Module Mode to find package:
 
-        find_package( FOO REQUIRED )
+    find_package( FOO REQUIRED )
 
 + Then include headers and link libs:
 
-        include_directories(${FOO_INCLUDE_DIR})
-        target_link_libraries( ${target} ${FOO_LIBRARY} )
+    include_directories(${FOO_INCLUDE_DIR})
+    target_link_libraries( ${target} ${FOO_LIBRARY} )
 
 Now you can build main project:
 
@@ -136,3 +136,6 @@ https://github.com/forexample/package-example
 
 创建自己的xxxConfig.cmake，用于第三方使用  
 https://blog.csdn.net/xiaoxiaozengz/article/details/127399274
+
+Code repository of all OpenGL chapters from the book and its accompanying  
+https://github.com/JoeyDeVries/LearnOpenGL
