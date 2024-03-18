@@ -12,7 +12,10 @@ There're two directories:
 
 ## Config Mode
 
-First, let's take a look at [CMakeLists.txt](config_mode/foo/CMakeLists.txt), it's a little complicated., but that's the minimum required configuration to run installation (`--install build`).
+First, let's take a look at [CMakeLists.txt](config_mode/foo/CMakeLists.txt), it's a little complicated, but that's the minimum required configuration to run installation (`--install build`).  
+As a result you can add dependency in on line source:
+
+    find_package( FOO CONFIG REQUIRED )
 
 Steps:
 
@@ -101,19 +104,19 @@ C:/Program Files (x86)/FOO
 Then address to file [FindFOO.cmake](module_mode/main/cmake/modules/FindFOO.cmake), this's an example to config third party path for `CMAKE_MODULE_PATH`.  
 You must add `FindXXX.cmake` file for you every third party library.
 
-Take a look at [CMakeLists.txt in main](module_mode/main/CMakeLists.txt):
+Take a look at [CMakeLists.txt](module_mode/main/CMakeLists.txt):
 + Add path to search FindFOO.cmake:
 
-    set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/modules/")
+        set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/modules/")
 
 + Then use Module Mode to find package:
 
-    find_package( FOO REQUIRED )
+        find_package( FOO REQUIRED )
 
 + Then include headers and link libs:
 
-    include_directories(${FOO_INCLUDE_DIR})
-    target_link_libraries( ${target} ${FOO_LIBRARY} )
+        include_directories(${FOO_INCLUDE_DIR})
+        target_link_libraries( ${target} ${FOO_LIBRARY} )
 
 Now you can build main project:
 
