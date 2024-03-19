@@ -1,4 +1,6 @@
 
+# CMake find_package Usage Example
+
 This repo demonstrates `find_package` usage for CMake project buidling.
 
 There're two directories:
@@ -13,13 +15,13 @@ There're two directories:
 ## Config Mode
 
 First, let's take a look at [CMakeLists.txt](config_mode/foo/CMakeLists.txt), it's a little complicated, but that's the minimum required configuration to run installation (`--install build`).  
-As a result you can add dependency in on line source:
+As a result you can add dependency with just one line of code:
 
     find_package( FOO CONFIG REQUIRED )
 
 Steps:
 
-Address to my third library directory `config_mode/foo`:
+Address to third library directory `config_mode/foo`:
 
     cd config_mode/foo
 
@@ -46,7 +48,7 @@ output:
 ```
 It means installation has been done successfully.
 
-Then address to my executable programm directory `config_mode/main`:
+Then address to executable programm directory `config_mode/main`:
 
     cd ../main
 
@@ -74,7 +76,7 @@ I'm foo.
 
 Steps:
 
-Address to my third library directory `module_mode/foo`:
+Address to third library directory `module_mode/foo`:
 
     cd module_mode/foo
 
