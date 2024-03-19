@@ -21,7 +21,7 @@ As a result you can add dependency with just one line of code:
 
 Steps:
 
-Address to third library directory `config_mode/foo`:
+Locate to third library directory `config_mode/foo`:
 
     cd config_mode/foo
 
@@ -39,7 +39,7 @@ Install includes and libs to destination `D:/my_libs/FOO`:
 
 output:
 ```
-- Installing: D:/my_libs/FOO/lib/foo.lib
+-- Installing: D:/my_libs/FOO/lib/foo.lib
 -- Installing: D:/my_libs/FOO/include/foo/foo.h
 -- Installing: D:/my_libs/FOO/lib/cmake/FOO/FOOConfig.cmake
 -- Installing: D:/my_libs/FOO/lib/cmake/FOO/FOOConfigVersion.cmake
@@ -48,7 +48,7 @@ output:
 ```
 It means installation has been done successfully.
 
-Then address to executable programm directory `config_mode/main`:
+Then Locate to executable programm directory `config_mode/main`:
 
     cd ../main
 
@@ -76,7 +76,7 @@ I'm foo.
 
 Steps:
 
-Address to third library directory `module_mode/foo`:
+Locate to third library directory `module_mode/foo`:
 
     cd module_mode/foo
 
@@ -106,8 +106,8 @@ C:/Program Files (x86)/FOO
 > [!WARNING]  
 > Because Module mode doesn't need installation script in CMakeLists.txt, so you must copy files by hand.
 
-Then address to file [FindFOO.cmake](module_mode/main/cmake/modules/FindFOO.cmake), this's an example to config third party path for `CMAKE_MODULE_PATH`.  
-You must add `FindXXX.cmake` file for you every third party library.
+Then Locate to file [FindFOO.cmake](module_mode/main/cmake/modules/FindFOO.cmake), this's an example to config third party path for `CMAKE_MODULE_PATH`.  
+You must create `FindXXX.cmake` file manually for you every third party library.
 
 Take a look at [CMakeLists.txt](module_mode/main/CMakeLists.txt):
 + Add path to search FindFOO.cmake:
